@@ -1,0 +1,151 @@
+@import '../assets/scss/variables.scss';
+
+
+.react-calendar {
+  padding: 20px 10px 0;
+  border-radius: 20px;
+  border: 6px solid $green !important;
+  position: relative;
+  width: 100% !important;
+  max-width: 680px !important;
+
+  @media screen and (min-width: $md) {
+    padding: 40px;
+  }
+
+  &__navigation {
+    border-radius: 20px;
+    background: $white;
+    border: 6px solid $green !important;
+    margin: 20px;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    margin: 0;
+    height: 50px !important;
+    overflow: hidden;
+  }
+
+  &__tile {
+    height: 50px;
+    position: relative;
+    margin: 5px 0 !important;
+    z-index: 1;
+    color: $white;
+    font-weight: 700;
+
+    @media screen and (min-width: $sm) {
+      height: 60px;
+    }
+
+    @media screen and (min-width: $lg) {
+      height: 70px;
+    }
+
+    &:before {
+      border-radius: 20px;
+      background: $purple !important;
+      top: 0;
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 50px;
+      content: '';
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      @media screen and (min-width: $sm) {
+        width: 60px;
+      }
+
+      @media screen and (min-width: $lg) {
+        width: 70px;
+      }
+    }
+
+    &:after {
+      font-size: 12px;
+      position: absolute;
+      top: 6px;
+      right: 18px;
+      color: #ffe3a1;
+      font-family: 'Font Awesome\ 5 Free';
+    }
+
+    &.finance:after {
+      content: "\f155";
+    }
+
+    &.shopping-list:after {
+      content: "\f291";
+    }
+
+    &.finance.shopping-list:after {
+      content: "\f155   \f291";
+    }
+
+    abbr {
+      z-index: 2;
+      position: relative;
+      color: $white;
+    }
+
+    &--now {
+      background: none !important;
+
+      &:before {
+        border: 3px solid $red;
+      }
+    }
+
+    &--active {
+      background: none !important;
+
+      &:before {
+        background: $red !important;
+      }
+    }
+
+    &--hasActive {
+      background: none !important;
+
+      &:before {
+        background: $red !important;
+      }
+    }
+
+    &:hover {
+      background: none !important;
+
+      &:before {
+        background: $green !important;
+      }
+    }
+  }
+
+  &__month-view {
+    &__days {
+      &__day {
+        font-size: 20px;
+        padding: 0;
+
+        @media screen and (min-width: $sm) {
+          font-size: 30px;
+        }
+
+        &--neighboringMonth {
+          opacity: 40% !important;
+        }
+      }
+    }
+  }
+  &__century-view {
+    &__decades {
+      &__decade {
+        &:before {
+          width: 100px !important
+        }
+      }
+    }
+  }
+}

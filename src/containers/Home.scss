@@ -1,0 +1,33 @@
+@import '../assets/scss/variables.scss';
+
+h1 {
+  color: $red;
+  font-size: 40px;
+  text-align: center;
+
+  @media screen and (min-width: $sm) {
+    font-size: 55px;
+  }
+
+  @media screen and (min-width: $md) {
+    font-size: 70px;
+    text-align: left;
+  }
+
+  @media screen and (min-width: $lg) {
+    font-size: 85px;
+  }
+}
+
+p {
+  color: $purple;
+  font-size: 15px;
+
+  @media screen and (min-width: $md) {
+    font-size: 25px;
+  }
+}
+
+.forms {
+  display: flex;
+}
