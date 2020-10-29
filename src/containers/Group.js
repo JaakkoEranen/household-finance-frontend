@@ -21,8 +21,6 @@ class Group extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.id)
-    console.log(this.props)
     this.fetchGroup(this.props.match.params.id);
   }
 
@@ -33,14 +31,12 @@ class Group extends React.Component {
   }
 
   fetchGroup(id) {
-    console.log("TEST")
     axios.get(process.env.REACT_APP_API_URL + "/groups/"+id, {
       headers: {
         'Authorization': `Bearer ${(this.props.profile.jwtToken)}`
       }
     })
     .then(({ data }) => {
-      console.log(data, 'data')
       this.setState({
         title: data.title,
         users: data.users,

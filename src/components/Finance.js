@@ -36,7 +36,6 @@ class Finance extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
     this.fetchFinance(this.props.groupId, this.props.selectedDate.date);
     this.fetchFinanceMonth(this.props.groupId, this.props.selectedDate.month);
   }

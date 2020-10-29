@@ -81,7 +81,6 @@ class GroupList extends React.Component {
   };
 
   placeholder() {
-    console.log("TESTiäää")
     return (
       <React.Fragment>
         <li className="placehoder"></li>
