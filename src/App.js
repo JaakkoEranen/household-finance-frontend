@@ -44,7 +44,7 @@ class App extends React.Component {
             username: "username",
             exp: 0,
             iat: 0,
-            email: "test1@test.com"
+            email: "test@test.com"
           }
         },
         refreshToken: {
